@@ -41,7 +41,11 @@ The base above is an inspection snapshot, not a permanent working branch. Refres
 
 ## Verification starting point
 
-No executable acceptance command was established by this bounded source inspection. Read `README.md` and record the narrowest existing check before implementation. Do not invent a `test` command or infer that the repository has no tests from this gap. For a documentation-only task, check links, factual source anchors and whitespace; do not build unrelated application code.
+### Offline manifest review
+
+The checked-in [Excel workbook manifest](manifest.xml) points to upstream GitHub Pages in both its default `SourceLocation` and its `Taskpane.Url` resource. A local copy of the manifest does not make the add-in run locally: [taskpane.html](taskpane.html) also loads Office.js from Microsoft's CDN.
+
+For a checkout-only review, compare the manifest and [README installation URL](README.md#install-in-excel). Check that each non-root asset or page path under the manifest's `https://vietkhai2710.github.io/traceforge-deploy/` prefix is tracked in the checkout, along with the task pane's relative JavaScript files. Resolve the edited Markdown links and check the diff for whitespace errors. These checks cover the packaged files, not live URL availability, Office manifest validation, or installation in Excel.
 
 ## Required handoff result
 
