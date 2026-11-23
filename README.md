@@ -14,6 +14,8 @@ Manifest:
 https://vietkhai2710.github.io/traceforge-deploy/manifest.xml
 ```
 
+For checkout-only review before installing, see [Offline manifest review](SWARM_READY.md#offline-manifest-review).
+
 ## Install In Excel
 
 1. Download `manifest.xml` from:
